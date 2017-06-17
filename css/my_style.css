@@ -4,18 +4,42 @@
     text-align: center;
 }
 
+body {
+    background-image: url('../images/night-sky.gif');
+    background-size: cover;
+}
+
 #home_top_labels {
     background-color: #efefef;
-    margin-top: 20px;
+    margin-top: 4vh;
     padding: 10px 0px 5px 0px;
-    height: 80px;
+    height: 6vh;
+    opacity: 0.6;
 }
 
 .top_labels {
     font-size: 200%;
 }
 
+#home_main {
+    position: relative;
+    height: 85vh;
+}
+
+#copyright {
+    height: 2vh;
+}
+
+#copyright_text {
+    color: #efefef;
+}
+
 #large_name {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 50%);
     font-size: 500%;
 }
 
