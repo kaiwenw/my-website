@@ -5,26 +5,82 @@
     <link rel="stylesheet" type="text/css" media="all" href="css/grid/text.css" />
     <link rel="stylesheet" type="text/css" media="all" href="css/grid/960.css" />
     <link rel="stylesheet" type="text/css" href="css/my_style.css" />
+    <script src="js/jquery.js"></script>
+
   </head>
 
   <body>
     <div class = "container_16 clearfix">
-      <div class = "grid_16" id = "home_top_labels">
-        <div class = "grid_3 alpha"> <p class = "top_labels"> <a href="">Background</a> </p> </div>
-        <div class = "grid_3"> <p class = "top_labels"> <a href="">Blog</a> </p> </div>
-        <div class = "grid_4"> <p class = "top_labels"> <a href="">Kai Wen</a> </p> </div>
-        <div class = "grid_3"> <p class = "top_labels"> <a href="">Projects</a> </p> </div>
-        <div class = "grid_3 omega"> <p class = "top_labels"> <a href="">Contact</a> </p> </div>
+      <div class = "grid_16" id = "top_button_container">
+        <div class = "grid_3 alpha"> 
+          <button class="top_button" id="about_button">About </button>
+        </div>
+        <div class = "grid_3"> 
+          <button class="top_button" id="exp_button">Experiences </button>
+        </div>
+        <div class = "grid_4"> 
+          <button class="top_button" id="home_button">Kai Wen </button>
+        </div>
+        <div class = "grid_3"> 
+          <button class="top_button" id="proj_button">Projects </button>
+        </div>
+        <div class = "grid_3 omega"> 
+          <button class="top_button" id="contact_button">Contact </button>
+        </div>
       </div>
 
-      <div class = "grid_16" id = "home_main">
-        <p id = "large_name"> Kai Wen Wang </p>
+      <div class = "grid_16" id = "main_container">
+        
+        <!-- about -->
+        <div class = "body_container" id = "about_body">
+          <h1> I am an CS and ECE student at Carnegie Mellon University! </h1>
+        </div>
+
+        <!-- experiences -->
+        <div class = "body_container" id = "exp_body">
+          <h1> I'm an ECE student at CMU Class of 2020! </h1>
+        </div>
+
+        <!-- home -->
+        <div class = "body_container" id = "home_body">
+          <p> Kai Wen Wang </p>
+        </div>
+
+        <!-- projects -->
+        <div class = "body_container" id = "proj_body">
+          <h1> I'm an ECE student at CMU Class of 2020! </h1>
+        </div>
+
+        <!-- contact -->
+        <div class = "body_container" id = "contact_body">
+          <h1> Contact Me! </h1>
+          <p> Connect with me on LinkedIn! </p>
+          <p> Check out my Github Repos! </p>
+          <p> Email me! </p>
+        </div>
+
       </div>
 
+      <!-- copyright box -->
       <div class = "grid_16" id = "copyright">
-        <p id = "copyright_text"> &copy Kai Wen Wang </p>
+        <p id = "copyright_text"> &copy 2017 Kai Wen Wang </p>
       </div>
     </div>
+
+    <script>
+
+      // toggle body from top_buttons
+      $(function() {
+        $('.top_button').on('click', function() {
+          var id = $(this).attr('id');
+          var body_id = '#' + id.split('_')[0] + '_body';
+          $(body_id).show();
+          $('.body_container:not(' + body_id + ')').hide();
+        });
+      });
+
+    </script>
+
   </body>
 
 </html>
