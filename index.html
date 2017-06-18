@@ -104,8 +104,9 @@
         $('.top_button').on('click', function() {
           var id = $(this).attr('id');
           var body_id = '#' + id.split('_')[0] + '_body';
-          $(body_id).show();
-          $('.body_container:not(' + body_id + ')').hide();
+          var fade_time = 100
+          $(body_id).fadeIn(fade_time);
+          $('.body_container:not(' + body_id + ')').fadeOut(fade_time);
         });
       });
 
