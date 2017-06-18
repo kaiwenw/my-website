@@ -29,6 +29,11 @@ ul {
 
 iframe {
     opacity: 1.0;
+    margin-bottom: 3vh;
+}
+
+div {
+    overflow: scroll;
 }
 
 #top_button_container {
@@ -91,6 +96,7 @@ button.top_button:hover {
 
 #copyright_text {
     color: #efefef;
+    font-size: 80%;
 }
 
 
