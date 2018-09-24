@@ -1,121 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
   <head>
-    <link rel="stylesheet" type="text/css" media="all" href="css/grid/reset.css" />
-    <link rel="stylesheet" type="text/css" media="all" href="css/grid/text.css" />
-    <link rel="stylesheet" type="text/css" media="all" href="css/grid/960.css" />
-    <link rel="stylesheet" type="text/css" href="css/my_style.css" />
-    <script src="js/jquery.js"></script>
+
+    <title>Clean Blog - Start Bootstrap Theme</title>
 
   </head>
 
   <body>
-    <div class = "container_16 clearfix">
-      <div class = "grid_16" id = "top_button_container">
-        <div class = "grid_3 alpha"> 
-          <button class="top_button" id="about_button">About </button>
-        </div>
-        <div class = "grid_3"> 
-          <button class="top_button" id="exp_button">Experiences </button>
-        </div>
-        <div class = "grid_4"> 
-          <button class="top_button" id="home_button">Kai Wen </button>
-        </div>
-        <div class = "grid_3"> 
-          <button class="top_button" id="proj_button">Projects </button>
-        </div>
-        <div class = "grid_3 omega"> 
-          <button class="top_button" id="contact_button">Contact </button>
-        </div>
-      </div>
 
-      <div class = "grid_16" id = "main_container">
-        
-        <!-- about -->
-        <div class = "body_container" id = "about_body">
-          <h1> I am an CS and ECE student at Carnegie Mellon University! </h1>
-        </div>
-
-        <!-- experiences -->
-        <div class = "body_container" id = "exp_body">
-          <div>
-            <h1> Work Experience </h1>
-            <h5> Research Assistant (Jan. 2017 to Present) </h5> 
-            <p> Shape-space modeling and deep learning generative approaches for computational biology </p>
-          </div>
-          <div>
-            <h1> Teaching </h1>
-            <h5> [Future] Teaching Assistant for Principles of Imperative Programming, 15-122 (Starting Fall 2017) </h5>
-
-            <h5> Grader for Concepts of Mathematics, 21-127 (Jan. 2017 to May 2017) </h5>
-            <p> Worked with Sebastien Vasey and other teaching assistants in grading homeworks and exams for the course </p>
-          </div>
-          <div>
-            <h1> Relevant Coursework at CMU </h1>
-              <h5> Computer Science </h5>
-              <ul>
-                <li> Introduction to Computer Systems (15-213) </li>
-                <li> Principles of Imperative Programming (15-122) </li>
-                <li> Principles of Functional Programming (15-150) </li>
-              </ul>
-              <h5> Mathematics </h5>
-              <ul>
-                <li> Matrices and Linear Algebra (21-241) </li>
-                <li> Concepts of Mathematics (21-127) </li>
-              </ul>
-          </div>
-        </div>
-
-        <!-- home -->
-        <div class = "body_container" id = "home_body">
-          <p> Kai Wen Wang </p>
-        </div>
-
-        <!-- projects -->
-        <div class = "body_container" id = "proj_body">
-          <div>
-            <h1> Mazify! </h1>
-            <p> Python-app that takes any 2D image and generates a maze shaped like the image using depth-first search. You can also play Pacman within the maze! </p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/sbcKpLpb748" frameborder="0" allowfullscreen></iframe>
-          </div>
-
-          <div>
-            <h1> Course Galaxy </h1>
-            <p> Using the ScottyLabs Course API at CMU, my team and I built this pygame-app at TartanHacks to show the connections between courses in a "course galaxy". It all works based on a score system that gives more relevant courses a higher score. </p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/_-gIwIBmMAk" frameborder="0" allowfullscreen></iframe>
-          </div>
-        </div>
-
-        <!-- contact -->
-        <div class = "body_container" id = "contact_body">
-          <h1> Contact Me! </h1>
-          <p> Connect with me on LinkedIn! </p>
-          <p> Check out my Github Repos! </p>
-          <p> Email me! </p>
-        </div>
-
-      </div>
-
-      <!-- copyright box -->
-      <div class = "grid_16" id = "copyright">
-        <p id = "copyright_text"> &copy 2017 Kai Wen Wang </p>
-      </div>
-    </div>
-
-    <script>
-
-      // toggle body from top_buttons
-      $(function() {
-        $('.top_button').on('click', function() {
-          var id = $(this).attr('id');
-          var body_id = '#' + id.split('_')[0] + '_body';
-          var fade_time = 100
-          $(body_id).fadeIn(fade_time);
-          $('.body_container:not(' + body_id + ')').fadeOut(fade_time);
-        });
-      });
-
-    </script>
+    Empty webpage
+    <a href="randomgraph.html">Random Graphs</a>
 
   </body>
 
