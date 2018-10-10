@@ -3,11 +3,11 @@
 <style>
 
 span {
-    font-size: 30px;
+    font-size: 20px;
 }
 
 input {
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .links line {
@@ -21,16 +21,15 @@ input {
 }
 
 </style>
-<h1>Welcome to Random G(n,p) :-)</h1>
-<div id="option">
-    <input name="updateButton" 
+<span>Welcome to <b>Random G(n=<input id="numNodes" type="text" name="numNodes" placeholder="100" value="100">,p=<input id="prob" type="text" name="prob" placeholder="0.01" value="0.01">)</b> :-)</span>
+<input name="updateButton" 
            type="button" 
            value="Update" 
            onclick="updateGraph()" />
-    <span>n=</span><input id="numNodes" type="text" name="numNodes" placeholder="100" value="100">
-    <span>p=</span><input id="prob" type="text" name="prob" placeholder="0.01" value="0.01">
+<br>
+<div>
+<svg width="500" height="500" margin="0 auto 0 auto"></svg>      
 </div>
-<svg width="1500" height="1000"></svg>    
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
 
@@ -134,9 +133,10 @@ function updateGraph() {
             .force("link", null)
             .force("center", null) ;
     d3.select('svg').remove();
-    d3.select('body').append('svg')
-        .attr('width', 2500)
-        .attr('height', 2000);
+    d3.select('body div').append('svg')
+        .attr('width', 800)
+        .attr('height', 800)
+        .attr('margin', 'auto');
     var numNodes = d3.select("#numNodes").property("value");
     var prob = d3.select("#prob").property("value");
     console.log(numNodes, prob);
