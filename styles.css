@@ -1,0 +1,83 @@
+html,body { 
+    margin: 0%; 
+    padding: 0; 
+    width: 100%; 
+    height: 100%;
+    font-size: 17px;
+    line-height: 130%;
+    font-family: "Arial", "Helvetica", "Verdana", "sans-serif";
+    background: white;
+}
+
+header {
+    line-height: 10%;
+    margin: 0;
+    top: 0;
+    position: fixed;
+    vertical-align:top;
+    width: 100%;
+    background: white;
+}
+
+nav {
+    margin: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    vertical-align:top;
+    background: white;
+}
+
+nav ul {
+    top: 0;
+    margin: 10px 0 0 0;
+    background: white;
+    border-bottom: solid gray 1px;
+}
+
+nav ul li {
+    top: 0;
+    display: inline-block;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+a { 
+    color: #4D4D4D; 
+    text-decoration: none;
+}
+
+.toptabs {
+    text-transform: uppercase; 
+    text-decoration: none;  
+    line-height: 42px;   
+    font-family: sans-serif;
+}
+
+.toptabs_active { 
+    color: #2dbccb; 
+    text-transform: uppercase; 
+    text-decoration: none;  
+    line-height: 42px;   
+    font-family: sans-serif;
+}
+
+font.highlight {
+    color: #C23E22; 
+    font-weight: bold
+}
+
+#home { background: white; }
+#projects { background: white; }
+#publications { background-color: white; }
+#cv { background-color: white; }
+
+#mainbody {padding: 4%; margin-top:100px;}
+

@@ -1,77 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="robots" content="all,index,follow" />
 
-    <title>Kai Wen Wang - CMU</title>
+    <title>Kai Wen Wang</title>
     <meta name="description" content="Kai Wen Wang - B.S. in CS at CMU" />
-
-    <style>
-        html,body { 
-            margin: 0%; 
-            padding: 0; 
-            width: 100%; 
-            height: 100%;
-            font-size: 17px;
-            line-height: 130%;
-            font-family: "Arial", "Helvetica", "Verdana", "sans-serif";
-            background: white;
-        }
-        header {
-            line-height: 10%;
-            margin: 0;
-            top: 0;
-            position: fixed;
-            vertical-align:top;
-            width: 100%;
-            background: white;
-        }
-        nav {
-            margin: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            vertical-align:top;
-            background: white;
-        }
-        nav ul {
-            top: 0;
-            margin: 10px 0 0 0;
-            background: white;
-            border-bottom: solid gray 1px;
-        }
-        nav ul li {
-            top: 0;
-            display: inline-block;
-            margin-right: 15px;
-            margin-left: 15px;
-            margin-bottom: 0px;
-            margin-top: 0px;
-        }
-        
-        h1 {
-            text-transform: uppercase;
-        }
-        
-        a { color: #4D4D4D; text-decoration: none;}
-        .toptabs {text-transform: uppercase; text-decoration: none;  line-height: 42px;   font-family: sans-serif;}
-        .toptabs_active { color: #2dbccb; text-transform: uppercase; text-decoration: none;  line-height: 42px;   font-family: sans-serif;}
-        
-        font.highlight {color: #C23E22; font-weight: bold}
-        
-        #home { background: white; }
-        #projects { background: white; }
-        #publications { background-color: white; }
-        #cv { background-color: white; }
-        
-        #mainbody {padding: 4%; margin-top:100px;}
-        
-      </style>
-
+    <link rel="icon" type="image/png" href="images/chi.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="postprocess.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -125,80 +64,5 @@
 
 <!-- ------------------------------------------------- -->
 </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
-
-    <script>
-        $( window ).resize(function() {
-            setScreen();
-        });
-
-         $(document).ready(function () {
-                setScreen();         
-         
-                $(document).on("scroll", onScroll);
-
-                $('a[href^="#"]').on('click', function (e) {
-                    e.preventDefault();
-                    $(document).off("scroll");
-
-                    $('a').each(function () {
-                        $(this).removeClass('toptabs_active');
-                    })
-                    $(this).addClass('toptabs_active');
-
-                    var target = this.hash;
-                    $target = $(target);
-                    $('html, body').stop().animate({
-                        'scrollTop': $target.offset().top-$('header').outerHeight(true)+3
-                    }, 500, 'swing', function () {
-                        $(document).on("scroll", onScroll);
-                    });
-                });
-            });
-
-            function onScroll(event){
-                var scrollPosition = $(document).scrollTop();
-                $('nav a').each(function () {
-                    var currentLink = $(this);
-                    var refElement = $(currentLink.attr("href"));
-                    if (refElement.position().top <= scrollPosition + $('header').outerHeight(true) +1 && refElement.position().top + refElement.height() > scrollPosition + $('header').outerHeight(true) +1) {
-                        $('nav ul li a').removeClass("toptabs_active");
-                        currentLink.addClass("toptabs_active");
-                    }
-                    else{
-                        currentLink.removeClass("toptabs_active");
-                    }
-                });
-            }
-
-
-            function setScreen() {
-                $('#mainbody').css('margin-top',$('header').outerHeight(true)+5);
-                
-                //Check if window width is small
-                if ($(document).width() < 800 ){
-                    $('#about').css('float','none');
-                    $('#news').css('float','none');
-                    $('#aboutvsnews').css('clear','both');
-                    $('#about').css('width', '94%');
-                    $('#news').css('width', '94%');
-                    $('nav ul li').css('margin-top','-10px');
-                    $('nav ul li').css('margin-bottom','-10px');
-                }
-                else
-                {
-                    $('#about').css('float','left');
-                    $('#news').css('float','right');
-                    $('#aboutvsnews').css('clear','none');
-                    $('#about').css('width', '60%');
-                    $('#news').css('width', '35%');
-                    $('nav ul li').css('margin-top','0px');
-                    $('nav ul li').css('margin-bottom','0px');
-                }
-                
-            }
-
-    </script>
 </body>
 </html>
