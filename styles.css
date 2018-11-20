@@ -54,6 +54,10 @@ a {
     text-decoration: none;
 }
 
+a.highlight{
+    color:#2dbccb;
+}
+
 .toptabs {
     text-transform: uppercase; 
     text-decoration: none;  
