@@ -65,8 +65,14 @@ h1 {
 }
 
 a { 
-    color: #4D4D4D; 
+    /*temporary highlighting*/
+    color:#2dbccb;
+    /*color: #4D4D4D; */
     text-decoration: none;
+}
+
+ul.news li {
+    margin: 1em;
 }
 
 a.highlight{
