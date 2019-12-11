@@ -80,6 +80,7 @@ a.highlight{
 }
 
 .toptabs {
+    color: #4D4D4D; 
     text-transform: uppercase; 
     text-decoration: none;  
     line-height: 42px;   
